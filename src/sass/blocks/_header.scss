@@ -1,0 +1,46 @@
+.header {
+    position: relative;
+    z-index: 11;
+    height: 80px;
+    &__menu {
+        width: 548px;
+        height: 12px;
+        font-family: "Open Sans";
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: left;
+        text-transform: uppercase;
+        list-style-type: none;
+        display: inline-flex;
+        justify-content: space-between;
+        margin-top: 68px;
+        margin-left: 604px;
+    }
+    &__item-link {
+        font-style: normal;
+        letter-spacing: 3.33px;
+        line-height: normal;
+        color: #fff;
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    &__search {
+        width: 183px;
+        height: 51px;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        padding: 5px 66px 5px 5px;
+        background: url(../icons/search.svg) no-repeat 120px 10px;
+        background-size: auto 60%;
+        background-color: #ffffff;
+        font-family: "Open Sans";
+        font-size: 17px;
+        color: #343434;
+        margin-left: 63px;
+    }
+}

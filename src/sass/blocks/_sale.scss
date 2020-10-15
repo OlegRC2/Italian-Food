@@ -1,0 +1,74 @@
+.sale {
+    min-height: 1500px;
+    &__offer-wrapper-1 {
+        position: relative;
+    }
+    &__offer-text {
+        padding-top: 170px;
+        margin-left: 775px;
+    }
+    &__offer-img {
+        position: absolute;
+        top: 54px;
+        left: 41px;
+    }
+    &__offer-title {
+        width: 533px;
+        color: $main-color;
+        font-family: "Open Sans";
+        font-size: 58px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 73px;
+        text-align: left;
+    }
+    &__offer-descr {
+        width: 505px;
+        color: $main-color;
+        font-family: "Open Sans";
+        font-size: 25px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: left;
+        margin-top: 30px;
+    }
+    a {
+        width: 334px;
+        display: block;
+        margin-top: 53px;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &__offer-btn {
+        font-family: "Open Sans";
+        font-size: 29px;
+        font-weight: 700;
+        font-style: normal;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 5.59px;
+        line-height: normal;
+    }
+    &__offer-wrapper-2 {
+        position: relative;
+        margin-top: 125px;
+        :first-child {
+            position: none;
+            left: 680px;
+        }
+        :last-child {
+            margin-left: 122px;
+        }
+        a {
+            position: absolute;
+            left: 0px;
+            .sale__offer-btn {
+                margin-left: 0;
+            }
+        }
+    }
+}

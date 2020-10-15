@@ -1,0 +1,45 @@
+.pizza {
+    height: 1082px;
+    background: url(../img/mainBg.jpg) center (center/cover) no-repeat;
+    &__title {
+        height: 163px;
+        color: #f8f6f1;
+        font-family: 'Reey';
+        font-size: 58px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: center;
+        padding-top: 100px;
+    }
+    &__subtitle {
+        width: 706px;
+        color: #f8f6f1;
+        font-family: 'Montserrat';
+        font-size: 25px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 33.33px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 70px;
+    }
+    &__line {
+        width: 162px;
+        height: 11px;
+        background-color: #fafafa;
+        margin: 0 auto;
+        margin-top: 41px;
+    }
+    &__pizza {
+        margin-top: 54px;
+        margin-left: 490px;
+    }
+    &__slice {
+        position: absolute;
+        top: 874px;
+        left: 290px;
+    }
+}
