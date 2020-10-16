@@ -1,0 +1,88 @@
+.footer {
+    height: 978px;
+    &__title {
+        color: #343434;
+        font-family: 'Montserrat';
+        font-size: 32px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: left;
+        padding-top: 338px;
+        margin-left: 83px;
+    }
+    &__subtitle {
+        width: 457px;
+        color: #343434;
+        font-family: 'Montserrat';
+        font-size: 24px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: justify;
+        margin-top: 38px;
+        margin-left: 83px;
+    }
+    &__wrapper-icons {
+        width: 212px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+        margin-left: 83px;
+    }
+    &__round {
+        width: 42px;
+        height: 42px;
+        background: $main-color;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    a {
+        position: relative;
+    }
+    &__icon {
+        width: 27px;
+        height: 27px;
+    }
+    &__wrapper-list {
+        position: absolute;
+        width: 634px;
+        top: 338px;
+        left: 709px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__list-title {
+        color: #343434;
+        font-family: 'Montserrat';
+        font-size: 32px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: left;
+    }
+    &__list-item {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 37px;
+        a {
+            color: #343434;
+            font-family: 'Montserrat';
+            font-size: 24px;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 41.76px;
+            text-align: left;
+            &:hover {
+                color: #343434;
+                text-decoration: none;
+            } 
+        }
+    }
+}
