@@ -39,7 +39,17 @@
     }
     &__slice {
         position: absolute;
-        top: 874px;
-        left: 290px;
+        top: 805px;
+        left: 350px;
+    }
+    &__5Sheets {
+        position: absolute;
+        top: -140px;
+        right: -50px;
+    }
+    &__3Sheets {
+        position: absolute;
+        top: 125px;
+        left: -50px;
     }
 }

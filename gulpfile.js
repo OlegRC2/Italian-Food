@@ -12,7 +12,7 @@ const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
 
 const dist = "./dist";
-//const dist = "C:/openserver/domains/Test3";
+// const dist = "C:/openserver/domains/Test3";
 
 gulp.task("copy-html", () => {
     return gulp.src("./src/*.html")
@@ -89,7 +89,17 @@ gulp.task("images", () => {
         .pipe(gulp.dest(dist + "/img"));
 });
 
-gulp.task("build", gulp.parallel("copy-html", "build-js", "build-sass", "fonts", "icons", "images"));
+gulp.task("js", () => {
+  return gulp.src("./src/js/lib/*")
+      .pipe(gulp.dest(dist + "/js/lib"));
+});
+
+gulp.task("php", () => {
+  return gulp.src("./src/*.php")
+      .pipe(gulp.dest(dist));
+});
+
+gulp.task("build", gulp.parallel("copy-html", "build-js", "build-sass", "fonts", "icons", "images", "js", "php"));
 
 gulp.task("prod", () => {
     gulp.src("./src/sass/style.scss")

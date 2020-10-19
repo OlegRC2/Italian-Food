@@ -42,9 +42,9 @@
             <img src="img/pastaMain.png" alt="pasta" class="promo__pasta">
             <img src="img/souseMain.png" alt="souse" class="promo__souse">
             <div id="scene" class="promo__sheet-wrapper">
-                <img data-depth="0.3" src="img/mainSheets1.png" alt="sheet" class="promo__sheets-1">
-                <img data-depth="0.1" src="img/mainSheets2.png" alt="sheet" class="promo__sheets-2">
-                <img data-depth="0.7" src="img/mainSheets3.png" alt="sheet" class="promo__sheets-3">
+                <!-- <img data-depth="0.3" src="img/mainSheets1.png" alt="sheet" class="promo__sheets-1"> -->
+                <img data-depth="0.2" src="img/mainSheets2.png" alt="sheet" class="promo__sheets-2">
+                <!-- <img data-depth="0.7" src="img/mainSheets3.png" alt="sheet" class="promo__sheets-3"> -->
             </div>
         </div>
     </section>
@@ -175,14 +175,16 @@
             </div>
             <div class="pizza__line"></div>
             <img src="img/pizza.png" alt="pizza" class="pizza__pizza">
-            <img src="img/sectorPizza.png" alt="slice-of-pizza" class="pizza__slice">
+            <img src="img/sectorPizza.png" alt="slice-of-pizza" class="pizza__slice" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="horizontal">
+            <img src="img/5_sheets.png" alt="sheets" class="pizza__5Sheets" data-paroller-factor="0.4" data-paroller-type="foreground" data-paroller-direction="vertical">
+            <img src="img/3_sheets.png" alt="sheets" class="pizza__3Sheets" data-paroller-factor="-0.4" data-paroller-type="foreground" data-paroller-direction="vertical">
         </div>
     </section>
 
     <section class="advantages">
         <div class="container">
             <div class="advantages__wrapper">
-                <div class="advantages__item">
+                <div class="advantages__item fadeIn wow" data-wow-duration="1.5s" data-wow-delay="0.5s">
                     <div class="advantages__item-title">Lorem Ipsum</div>
                     <div class="advantages__item-descr">
                         Lorem ipsum dolor sit amet, consecte
@@ -190,7 +192,7 @@
                         ullamco laboris nisi ut aliqolore.
                     </div>
                 </div>
-                <div class="advantages__item">
+                <div class="advantages__item fadeIn wow" data-wow-duration="1.5s" data-wow-delay="1.0s">
                     <div class="advantages__item-title">Lorem Ipsum</div>
                     <div class="advantages__item-descr">
                         Lorem ipsum dolor sit amet, consecte
@@ -198,7 +200,7 @@
                         ullamco laboris nisi ut aliqolore.
                     </div>
                 </div>
-                <div class="advantages__item">
+                <div class="advantages__item fadeIn wow" data-wow-duration="1.5s" data-wow-delay="1.5s">
                     <div class="advantages__item-title">Lorem Ipsum</div>
                     <div class="advantages__item-descr">
                         Lorem ipsum dolor sit amet, consecte
@@ -222,9 +224,12 @@
             </div>
 
             <form action="#" class="main-form">
-                <input placeholder="Your Email" type="email">
+                <input placeholder="Your Email" type="email" name="email">
                 <button class="form-btn">Subscribe</button>
             </form>
+
+            <img src="img/3_sheets.png" alt="sheets" class="subscription__3Sheets" data-paroller-factor="-0.4" data-paroller-type="foreground" data-paroller-direction="vertical">
+            <img src="img/2_sheets.png" alt="sheets" class="subscription__2Sheets" data-paroller-factor="0.4" data-paroller-type="foreground" data-paroller-direction="vertical">
         </div>
     </section>
 
@@ -289,6 +294,11 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/lib/jquery-3.5.1.min.js"></script>
+    <script src="js/lib/jquery.paroller.js"></script>
+    <script src="js/lib/mark.min.js"></script>
+    <script src="js/lib/wow.min.js"></script>
 
     <script src="script.js"></script>
 </body>

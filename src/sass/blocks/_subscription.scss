@@ -74,4 +74,14 @@
             outline: none;
         }
     }
+    &__3Sheets {
+        position: absolute;
+        top: -55px;
+        right: -30px;
+    }
+    &__2Sheets {
+        position: absolute;
+        bottom: -510px;
+        left: -40px;
+    }
 }

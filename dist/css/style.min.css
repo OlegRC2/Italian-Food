@@ -2940,6 +2940,18 @@ template {
   .btn-main:hover {
     box-shadow: 1px 1px 25px #343434; }
 
+.message {
+  font-family: 'Open Sans';
+  font-size: 25px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  text-align: center;
+  margin-top: 55px; }
+
+.mt-0px {
+  margin-top: 0; }
+
 .container {
   position: relative;
   max-width: 1440px;
@@ -3304,8 +3316,16 @@ template {
     margin-left: 490px; }
   .pizza__slice {
     position: absolute;
-    top: 874px;
-    left: 290px; }
+    top: 805px;
+    left: 350px; }
+  .pizza__5Sheets {
+    position: absolute;
+    top: -140px;
+    right: -50px; }
+  .pizza__3Sheets {
+    position: absolute;
+    top: 125px;
+    left: -50px; }
 
 .advantages {
   min-height: 780px; }
@@ -3428,6 +3448,14 @@ template {
     text-transform: uppercase; }
     .subscription .form-btn:focus {
       outline: none; }
+  .subscription__3Sheets {
+    position: absolute;
+    top: -55px;
+    right: -30px; }
+  .subscription__2Sheets {
+    position: absolute;
+    bottom: -510px;
+    left: -40px; }
 
 .footer {
   height: 978px; }
