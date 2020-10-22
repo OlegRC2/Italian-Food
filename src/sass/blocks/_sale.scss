@@ -63,12 +63,12 @@
         :last-child {
             margin-left: 122px;
         }
-        a {
-            position: absolute;
-            left: 0px;
-            .sale__offer-btn {
-                margin-left: 0;
-            }
+    }
+    &__btn-two {
+        position: absolute;
+        left: 0px;
+        .sale__offer-btn {
+            margin-left: 0;
         }
     }
 }

@@ -2831,6 +2831,67 @@ $({ target: 'Array', proto: true, forced: [].forEach != forEach }, {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es.array.slice.js":
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/es.array.slice.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules/core-js/internals/is-object.js");
+var isArray = __webpack_require__(/*! ../internals/is-array */ "./node_modules/core-js/internals/is-array.js");
+var toAbsoluteIndex = __webpack_require__(/*! ../internals/to-absolute-index */ "./node_modules/core-js/internals/to-absolute-index.js");
+var toLength = __webpack_require__(/*! ../internals/to-length */ "./node_modules/core-js/internals/to-length.js");
+var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "./node_modules/core-js/internals/to-indexed-object.js");
+var createProperty = __webpack_require__(/*! ../internals/create-property */ "./node_modules/core-js/internals/create-property.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+var arrayMethodHasSpeciesSupport = __webpack_require__(/*! ../internals/array-method-has-species-support */ "./node_modules/core-js/internals/array-method-has-species-support.js");
+var arrayMethodUsesToLength = __webpack_require__(/*! ../internals/array-method-uses-to-length */ "./node_modules/core-js/internals/array-method-uses-to-length.js");
+
+var HAS_SPECIES_SUPPORT = arrayMethodHasSpeciesSupport('slice');
+var USES_TO_LENGTH = arrayMethodUsesToLength('slice', { ACCESSORS: true, 0: 0, 1: 2 });
+
+var SPECIES = wellKnownSymbol('species');
+var nativeSlice = [].slice;
+var max = Math.max;
+
+// `Array.prototype.slice` method
+// https://tc39.github.io/ecma262/#sec-array.prototype.slice
+// fallback for not array-like ES3 strings and DOM objects
+$({ target: 'Array', proto: true, forced: !HAS_SPECIES_SUPPORT || !USES_TO_LENGTH }, {
+  slice: function slice(start, end) {
+    var O = toIndexedObject(this);
+    var length = toLength(O.length);
+    var k = toAbsoluteIndex(start, length);
+    var fin = toAbsoluteIndex(end === undefined ? length : end, length);
+    // inline `ArraySpeciesCreate` for usage native `Array#slice` where it's possible
+    var Constructor, result, n;
+    if (isArray(O)) {
+      Constructor = O.constructor;
+      // cross-realm fallback
+      if (typeof Constructor == 'function' && (Constructor === Array || isArray(Constructor.prototype))) {
+        Constructor = undefined;
+      } else if (isObject(Constructor)) {
+        Constructor = Constructor[SPECIES];
+        if (Constructor === null) Constructor = undefined;
+      }
+      if (Constructor === Array || Constructor === undefined) {
+        return nativeSlice.call(O, k, fin);
+      }
+    }
+    result = new (Constructor === undefined ? Array : Constructor)(max(fin - k, 0));
+    for (n = 0; k < fin; k++, n++) if (k in O) createProperty(result, n, O[k]);
+    result.length = n;
+    return result;
+  }
+});
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/es.number.to-fixed.js":
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es.number.to-fixed.js ***!
@@ -5671,6 +5732,10 @@ function form() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
+/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__);
+
+
 function moreText(btnSelector, textSelector, sectionSelector) {
   // функция показа скрытого блока текста
   var btn = document.querySelector(btnSelector),
@@ -5681,7 +5746,13 @@ function moreText(btnSelector, textSelector, sectionSelector) {
     text.classList.add('fadeIn');
     text.style.display = 'block';
     btn.style.display = 'none';
-    section.style.minHeight = '630px';
+    var height = +window.getComputedStyle(section).minHeight.slice(0, 3);
+
+    if (height < 800) {
+      section.style.minHeight = height + 100 + 'px';
+    } else {
+      section.style.minHeight = height + 40 + 'px';
+    }
   });
 }
 
@@ -5813,9 +5884,11 @@ function slider(_ref) {
   }
 
   next.addEventListener('click', function () {
-    if (currentWidth <= 767) {
+    if (currentWidth <= 1200 && currentWidth > 991) {
       // при изменении ширины экрана менее 767 пикселей
       slideNext(2, slides); // показываем 2 элемента вместо 3
+    } else if (currentWidth <= 991) {
+      slideNext(1, slides);
     } else {
       slideNext(3, slides);
     }
@@ -5829,9 +5902,9 @@ function slider(_ref) {
 
     if (numHideSlidePrev == 0) {
       // слайдер в начальном положении
-      for (var i = slides.length - 1; i != slides.length - numSlides; i--) {
+      for (var i = slides.length; i > numSlides; i--) {
         // считаем ширину скрытых слайдов, чтобы подвинуть на эту ширину 
-        slideWidth += slide[i].offsetWidth; // ширина всех скрытых слайдов
+        slideWidth += slide[i - 1].offsetWidth; // ширина всех скрытых слайдов
       }
 
       numHideSlidePrev = slides.length - numSlides; // устанавливаем счетчик слайдов "назад" в максимальное положение
@@ -5839,6 +5912,8 @@ function slider(_ref) {
       offset += slideWidth + pbs * (slides.length - numSlides); // двигаем на максимальную ширину
 
       numHideSlideNext = slide.length; // устанавливаем счетчик слайдов "вперед" в максимальное положение
+
+      console.log(numHideSlidePrev);
     } else if (numHideSlidePrev > 0) {
       // слайдер в промежуточном положении (не начальное и есть еще скрытые предыдущие слайды)
       slideWidth = slide[numHideSlidePrev - 1].offsetWidth; // берем ширину следующего слайда
@@ -5848,13 +5923,19 @@ function slider(_ref) {
       offset -= slideWidth + pbs; // добавляем к текущей позиции ширину следующего слайда + отступ между слайдами
 
       numHideSlideNext--; // минусуем из счетчика слайдов "вперед"
+
+      if (offset < 0) {
+        offset = 0;
+      }
     }
   }
 
   prev.addEventListener('click', function () {
-    if (currentWidth <= 767) {
+    if (currentWidth <= 1200 && currentWidth > 991) {
       // при изменении ширины экрана менее 767 пикселей
       slidePrev(2, slides); // показываем 2 элемента вместо 3
+    } else if (currentWidth <= 991) {
+      slidePrev(1, slides);
     } else {
       slidePrev(3, slides);
     }

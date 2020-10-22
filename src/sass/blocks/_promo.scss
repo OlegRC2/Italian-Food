@@ -13,7 +13,7 @@
         margin-left: 105px;
         text-shadow: 0 5px 5px rgba(84, 82, 79, 0.22);
         color: #ffffff;
-        font-family: Reey;
+        font-family: "Reey";
         font-size: 92px;
         font-weight: 400;
         z-index: 11;
@@ -32,10 +32,15 @@
         line-height: normal;
         z-index: 10;
     }
+    &__a-btn {
+        display: block;
+        width: 218px;
+        margin-left: 102px;
+        height: 47px;
+        margin-top: 66px;
+    }
     &__btn {
         position: relative;
-        margin-top: 66px;
-        margin-left: 102px;
         z-index: 11;
     }
     &__descr {
@@ -81,6 +86,7 @@
     &__sheets-2 {
         position: relative;
         top: -825px;
+        width: 100%;
     }
     &__sheets-3 {
         position: relative;

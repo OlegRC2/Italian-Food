@@ -1,0 +1,742 @@
+@media ( max-width: 1555px ) {
+    .header__menu {
+        margin-left: 350px;
+    }
+    .promo {
+        &__sheet-wrapper {
+            top: 148px;
+            left: 108px;
+        }
+        &__sheets-2 {
+            // display: none;
+        }
+        &__title {
+            font-size: 80px;
+            margin-top: -139px;
+            margin-left: 375px;
+        }
+        &__subtitle {
+            margin-top: 140px;
+            margin-left: 50px;
+        }
+        &__a-btn {
+            margin-left: 50px;
+        }
+        &__descr {
+            margin-left: 50px;
+            width: 295px;
+            margin-top: 100px;
+        }
+        &__pasta {
+            top: 200px;
+            right: 0;
+        }
+        &__souse {
+            top: 700px;
+        }
+    }
+    .slider-block {
+        &__slider-window {
+            width: 790px;
+        }
+        &__next {
+            right: 18px;
+        }
+    }
+    .more-text {
+        &__wrapper {
+            width: 990px;
+            padding: 0px 50px 0 50px;
+        }
+        &__text {
+            width: 410px;
+        }
+    }
+    .sale {
+        min-height: 1300px;
+        &__offer-img {
+            width: 45%;
+            left: 10px;
+            top: 80px;
+        }
+        &__offer-text {
+            margin-left: 590px;
+            padding-top: 80px;
+        }
+        &__offer-title {
+            font-size: 50px;
+        }
+        &__offer-wrapper-2 {
+            :first-child {
+                left: 610px;
+            }
+            :last-child {
+                margin-left: 40px;
+            }
+        }
+        .sale__btn-two {
+            margin-left: 0;
+        }
+    }
+    .pizza {
+        &__pizza {
+            width: 70%;
+            margin-top: 48px;
+            margin-left: 271px;
+        }
+        &__slice {
+            width: 451px;
+            top: 807px;
+            left: 192px;
+        }
+        &__5Sheets {
+            top: -150px;
+            right: 5px;
+            width: 250px;
+        }
+        &__3Sheets {
+            top: 273px;
+            left: -75px;
+            width: 300px;
+        }
+    }
+    .advantages {
+        min-height: 700px;
+        &__wrapper {
+            width: 950px;
+        }
+        &__item {
+            width: 280px;
+        }
+        &__descr {
+            margin-top: 180px;
+        }
+    }
+    .subscription {
+        &__title {
+            padding-top: 180px;
+        }
+        &__3Sheets {
+            right: 0;
+            width: 300px;
+        }
+        &__2Sheets {
+            left: -85px;
+            width: 300px;
+        }
+    }
+    .footer {
+        height: 620px;
+        &__title {
+            padding-top: 200px;
+            margin-left: 70px;
+        }
+        &__subtitle {
+            margin-left: 70px;
+            width: 320px;
+            font-size: 20px;
+        }
+        &__wrapper-icons {
+            margin-left: 70px;
+        }
+        &__wrapper-list {
+            width: 530px;
+            top: 200px;
+            left: 570px;
+        }
+        &__list-item {
+            a {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media ( max-width: 1200px ) {
+    .container {
+        max-width: 992px;
+    }
+    .header__menu {
+        margin-left: 170px;
+    }
+    .promo {
+        &__sheet-wrapper {
+            // display: none;
+        }
+        &__sheets-2 {
+            // display: none;
+        }
+        &__logo {
+            margin-top: 50px;
+            margin-left: 60px;
+        }
+        &__title {
+            font-size: 80px;
+            margin-top: -95px;
+            margin-left: 290px;
+        }
+        &__subtitle {
+            margin-top: 40px;
+            margin-left: 50px;
+        }
+        &__a-btn {
+            margin-left: 50px;
+        }
+        &__descr {
+            margin-left: 50px;
+            width: 295px;
+            margin-top: 100px;
+        }
+        &__pasta {
+            top: 200px;
+            right: 0;
+        }
+        &__souse {
+            top: 700px;
+        }
+    }
+    .slider-block {
+        &__slider-window {
+            width: 790px;
+        }
+        &__next {
+            right: 18px;
+        }
+    }
+    .more-text {
+        &__wrapper {
+            width: 990px;
+            padding: 0px 50px 0 50px;
+        }
+        &__text {
+            width: 410px;
+        }
+    }
+    .sale {
+        min-height: 1300px;
+        &__offer-img {
+            width: 45%;
+            left: 10px;
+            top: 80px;
+        }
+        &__offer-text {
+            margin-left: 460px;
+            padding-top: 80px;
+        }
+        &__offer-title {
+            font-size: 50px;
+        }
+        &__offer-wrapper-2 {
+            :first-child {
+                left: 546px;
+            }
+            :last-child {
+                margin-left: 30px;
+            }
+        }
+    }
+    .pizza {
+        &__pizza {
+            width: 70%;
+            margin-top: 160px;
+            margin-left: 271px;
+        }
+        &__slice {
+            width: 375px;
+            top: 840px;
+            left: 150px;
+        }
+        &__5Sheets {
+            top: -150px;
+            right: 5px;
+            width: 250px;
+        }
+        &__3Sheets {
+            top: 273px;
+            left: -75px;
+            width: 300px;
+        }
+    }
+    .advantages {
+        min-height: 700px;
+        &__wrapper {
+            width: 950px;
+        }
+        &__item {
+            width: 280px;
+        }
+        &__descr {
+            margin-top: 180px;
+        }
+    }
+    .subscription {
+        &__title {
+            padding-top: 180px;
+        }
+        &__3Sheets {
+            right: 0;
+            width: 300px;
+        }
+        &__2Sheets {
+            left: -85px;
+            width: 300px;
+        }
+    }
+    .footer {
+        height: 620px;
+        &__title {
+            padding-top: 200px;
+            margin-left: 30px;
+        }
+        &__subtitle {
+            margin-left: 30px;
+            width: 320px;
+            font-size: 20px;
+        }
+        &__wrapper-icons {
+            margin-left: 30px;
+        }
+        &__wrapper-list {
+            width: 530px;
+            top: 200px;
+            left: 410px;
+        }
+        &__list-item {
+            a {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media ( max-width: 991px ) {
+    .container {
+        max-width: 767px;
+    }
+    .header__menu {
+        margin-left: -7px;
+    }
+    .header__search {
+        margin-left: 13px;
+    }
+    .promo {
+        &__sheet-wrapper {
+            display: none;
+        }
+        &__sheets-2 {
+            display: none;
+        }
+        // &__logo {
+        //     margin-top: 50px;
+        //     margin-left: 60px;
+        // }
+        &__title {
+            font-size: 80px;
+            margin-top: -110px;
+            margin-left: 290px;
+        }
+        &__subtitle {
+            margin-top: 4px;
+            margin-left: 24px;
+        }
+        &__a-btn {
+            margin-left: 24px;
+        }
+        &__descr {
+            margin-left: 24px;
+            width: 242px;
+            margin-top: 100px;
+        }
+        &__pasta {
+            width: 65%;
+            top: 265px;
+            right: 0;
+        }
+        &__souse {
+            top: 700px;
+            left: 86px;
+        }
+    }
+    .slider-block {
+        &__title {
+            font-size: 60px;
+        }
+        &__slider-window {
+            width: 373px;
+        }
+        &__next {
+            right: 18px;
+        }
+    }
+    .more-text {
+        &__title {
+            font-size: 62px;
+        }
+        &__wrapper {
+            width: 750px;
+            padding: 0px 50px 0 50px;
+        }
+        &__text {
+            width: 295px;
+        }
+    }
+    .sale {
+        min-height: 1150px;
+        &__offer-img {
+            width: 45%;
+            left: 10px;
+            top: 80px;
+        }
+        &__offer-text {
+            margin-left: 355px;
+            padding-top: 80px;
+        }
+        &__offer-title {
+            width: 390px;
+            font-size: 32px;
+            line-height: 47px;
+        }
+        &__offer-descr {
+            font-size: 20px;
+            width: 355px;
+        }
+        .btn-main {
+            width: 300px;
+            height: 55px;
+        }
+        &__offer-btn {
+            font-size: 25px;
+        }
+        a {
+            margin-top: 37px;
+        }
+        &__offer-wrapper-2 {
+            :first-child {
+                left: 400px;
+            }
+            :last-child {
+                margin-left: 30px;
+            }
+        }
+    }
+    .pizza {
+        height: 940px;
+        &__title {
+            font-size: 52px;
+            padding-top: 75px;
+        }
+        &__subtitle {
+            margin-top: 110px;
+        }
+        &__pizza {
+            width: 70%;
+            margin-top: 115px;
+            margin-left: 225px;
+        }
+        &__slice {
+            width: 280px;
+            top: 751px;
+            left: 183px;
+        }
+        &__5Sheets {
+            top: -150px;
+            right: 5px;
+            width: 250px;
+        }
+        &__3Sheets {
+            top: 273px;
+            left: -75px;
+            width: 300px;
+        }
+    }
+    .advantages {
+        min-height: 600px;
+        &__wrapper {
+            width: 700px;
+        }
+        &__item {
+            width: 210px;
+        }
+        &__item-title {
+            font-size: 33px;
+        }
+        &__descr {
+            width: 700px;
+            margin-top: 140px;
+        }
+    }
+    .subscription {
+        &__title {
+            padding-top: 180px;
+        }
+        &__subtitle {
+            width: 700px;
+        }
+        &__3Sheets {
+            right: 0;
+            width: 300px;
+        }
+        .main-form {
+            input {
+                width: 700px;
+            }
+            .form-btn {
+                left: 479px;
+            }
+        }
+        &__2Sheets {
+            left: -85px;
+            width: 300px;
+        }
+    }
+    .footer {
+        height: 670px;
+        &__title {
+            padding-top: 395px;
+            margin-left: 30px;
+            text-align: center;
+        }
+        &__subtitle {
+            margin: 0 auto;
+            width: 470px;
+            font-size: 20px;
+            margin-top: 25px;
+        }
+        &__wrapper-icons {
+            margin: 0 auto;
+            margin-top: 25px;
+        }
+        &__wrapper-list {
+            width: 530px;
+            top: 70px;
+            left: 125px;
+        }
+        &__list-item {
+            a {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media ( max-width: 767px ) {
+    .container {
+        max-width: 570px;
+    }
+    .header__menu {
+        margin-left: -7px;
+        margin-top: 32px;
+    }
+    .header__search {
+        display: none;
+    }
+    .promo {
+        min-height: 1000px;
+        &__sheet-wrapper {
+            display: none;
+        }
+        &__sheets-2 {
+            display: none;
+        }
+        // &__logo {
+        //     margin-top: 50px;
+        //     margin-left: 60px;
+        // }
+        &__title {
+            font-size: 80px;
+            margin-top: -140px;
+            margin-left: 263px;
+        }
+        &__subtitle {
+            margin-top: 22px;
+            margin-left: 24px;
+        }
+        &__a-btn {
+            margin-left: 24px;
+        }
+        &__descr {
+            margin-left: 24px;
+            width: 167px;
+            margin-top: 45px;
+        }
+        &__pasta {
+            width: 65%;
+            top: 390px;
+            right: 0;
+        }
+        &__souse {
+            width: 37%;
+            top: 700px;
+            left: 120px;
+        }
+    }
+    .slider-block {
+        &__title {
+            font-size: 60px;
+        }
+        &__subtitle {
+            width: 550px;
+        }
+        &__slider-window {
+            width: 373px;
+            margin-top: 40px;
+        }
+        &__prev {
+            top: 530px;
+        }
+        &__next {
+            top: 530px;
+        }
+        &__btn {
+            margin-top: 50px;
+        }
+    }
+    .more-text {
+        min-height: 820px;
+        &__title {
+            font-size: 62px;
+        }
+        &__wrapper {
+            width: 560px;
+            padding: 0px 50px 0 50px;
+        }
+        &__text {
+            width: 205px;
+        }
+        &__hide-text {
+            width: 455px;
+            margin-bottom: 10px;
+        }
+    }
+    .sale {
+        min-height: 925px;
+        &__offer-img {
+            width: 45%;
+            left: 10px;
+            top: 80px;
+        }
+        &__offer-text {
+            margin-left: 270px;
+            padding-top: 80px;
+        }
+        &__offer-title {
+            width: 285px;
+            font-size: 24px;
+            line-height: 35px;
+        }
+        &__offer-descr {
+            font-size: 17px;
+            width: 260px;
+        }
+        .btn-main {
+            width: 300px;
+            height: 55px;
+        }
+        &__offer-btn {
+            font-size: 25px;
+        }
+        a {
+            margin-top: 55px;
+            margin-left: -143px;
+        }
+        &__offer-wrapper-2 {
+            margin-top: 30px;
+            :first-child {
+                left: 298px;
+            }
+            :last-child {
+                margin-left: 30px;
+            }
+        }
+        .sale__btn-two {
+            margin-left: 100px;
+            margin-top: 65px;
+        }
+        
+    }
+    .pizza {
+        height: 940px;
+        &__title {
+            font-size: 52px;
+            padding-top: 50px;
+            line-height: 100px;
+        }
+        &__subtitle {
+            width: 560px;
+            margin-top: 140px;
+        }
+        &__pizza {
+            width: 80%;
+            margin-top: 117px;
+            margin-left: 110px;
+        }
+        &__slice {
+            width: 229px;
+            top: 783px;
+            left: 94px;
+        }
+        &__5Sheets {
+            top: 250px;
+            right: 5px;
+            width: 155px;
+        }
+        &__3Sheets {
+            top: 450px;
+            left: -45px;
+            width: 155px;
+        }
+    }
+    .advantages {
+        min-height: 600px;
+        &__wrapper {
+            width: 520px;
+        }
+        &__item {
+            width: 155px;
+        }
+        &__item-title {
+            font-size: 29px;
+        }
+        &__item-descr {
+            font-size: 15px;
+        }
+        &__descr {
+            width: 550px;
+            margin-top: 70px;
+        }
+    }
+    .subscription {
+        min-height: 650px;
+        &__title {
+            padding-top: 80px;
+        }
+        &__subtitle {
+            width: 550px;
+            font-size: 27px;
+        }
+        &__3Sheets {
+            right: 0;
+            width: 155px;
+        }
+        .main-form {
+            input {
+                width: 520px;
+            }
+            .form-btn {
+                left: 299px;
+            }
+        }
+        &__2Sheets {
+            left: -55px;
+            width: 155px;
+            bottom: -250px;
+        }
+    }
+    .footer {
+        height: 670px;
+        &__wrapper-list {
+            left: 20px;
+        }
+    }
+}
+

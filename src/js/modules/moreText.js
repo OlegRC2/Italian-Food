@@ -10,7 +10,13 @@ function moreText(btnSelector, textSelector, sectionSelector) {                 
         text.classList.add('fadeIn');
         text.style.display = 'block';
         btn.style.display = 'none';
-        section.style.minHeight = '630px';
+        const height = +window.getComputedStyle(section).minHeight.slice(0,3);
+        if (height < 800) {
+            section.style.minHeight = height + 100 + 'px';
+        } else {
+            section.style.minHeight = height + 40 + 'px';
+        }
+        
     });
 }
 

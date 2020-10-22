@@ -61,11 +61,13 @@ function slider({slide, nextArrow, prevArrow, wrapper, field}) {
     }   
 
     next.addEventListener('click', () => {
-        if (currentWidth <= 767) {                                                          // при изменении ширины экрана менее 767 пикселей
+        if (currentWidth <= 1200 && currentWidth > 991) {                                   // при изменении ширины экрана менее 767 пикселей
             slideNext(2, slides);                                                           // показываем 2 элемента вместо 3
+        } else if (currentWidth <= 991) {
+            slideNext(1, slides);
         } else {
             slideNext(3, slides);
-        }
+        }   
 
         slidesField.style.transform = `translateX(-${offset}px)`;                           // передвигаем всю ленту слайдов влево на нужную длину
     });
@@ -75,13 +77,14 @@ function slider({slide, nextArrow, prevArrow, wrapper, field}) {
 
         if (numHideSlidePrev == 0) {                                                        // слайдер в начальном положении
 
-            for (let i = slides.length - 1; i != slides.length - numSlides; i--) {          // считаем ширину скрытых слайдов, чтобы подвинуть на эту ширину 
-                slideWidth += slide[i].offsetWidth;                                         // ширина всех скрытых слайдов
+            for (let i = slides.length; i > numSlides; i--) {                               // считаем ширину скрытых слайдов, чтобы подвинуть на эту ширину 
+                slideWidth += slide[i - 1].offsetWidth;                                     // ширина всех скрытых слайдов
             }
 
             numHideSlidePrev = slides.length - numSlides;                                   // устанавливаем счетчик слайдов "назад" в максимальное положение
             offset += slideWidth + pbs * (slides.length - numSlides);                       // двигаем на максимальную ширину
             numHideSlideNext = slide.length;                                                // устанавливаем счетчик слайдов "вперед" в максимальное положение
+            console.log(numHideSlidePrev);
 
         } else if (numHideSlidePrev > 0) {                                                  // слайдер в промежуточном положении (не начальное и есть еще скрытые предыдущие слайды)
 
@@ -89,12 +92,18 @@ function slider({slide, nextArrow, prevArrow, wrapper, field}) {
             numHideSlidePrev--;                                                             // устанавливаем номер следующего скрытого "назад" слайда
             offset -= slideWidth + pbs;                                                     // добавляем к текущей позиции ширину следующего слайда + отступ между слайдами
             numHideSlideNext--;                                                             // минусуем из счетчика слайдов "вперед"
+
+            if (offset < 0) {
+                offset = 0;
+            }
         }
     }
 
     prev.addEventListener('click', () => {
-        if (currentWidth <= 767) {                                                          // при изменении ширины экрана менее 767 пикселей
+        if (currentWidth <= 1200 && currentWidth > 991) {                                   // при изменении ширины экрана менее 767 пикселей
             slidePrev(2, slides);                                                           // показываем 2 элемента вместо 3
+        } else if (currentWidth <= 991) {
+            slidePrev(1, slides);
         } else {
             slidePrev(3, slides);
         }   
