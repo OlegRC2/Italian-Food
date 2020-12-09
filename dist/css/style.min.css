@@ -2896,6 +2896,8 @@ template {
     animation-iteration-count: 1 !important; } }
 
 .btn-white {
+  display: block;
+  position: relative;
   width: 218px;
   height: 47px;
   background-color: #ffffff;
@@ -2910,14 +2912,24 @@ template {
   letter-spacing: normal;
   line-height: normal;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding: 1px 6px 1px 6px; }
+  .btn-white span {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 218px; }
   .btn-white:focus {
     outline: none; }
   .btn-white:hover {
-    box-shadow: 1px 1px 10px #fff; }
+    box-shadow: 1px 1px 10px #fff;
+    color: #2e3034;
+    text-decoration: none; }
 
 .btn-main {
   display: block;
+  position: relative;
   width: 334px;
   height: 75px;
   background-color: #343434;
@@ -2935,10 +2947,17 @@ template {
   font-style: normal;
   letter-spacing: 3.58px;
   line-height: normal; }
+  .btn-main span {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 218px; }
   .btn-main:focus {
     outline: none; }
   .btn-main:hover {
-    box-shadow: 1px 1px 25px #343434; }
+    box-shadow: 1px 1px 25px #343434;
+    color: #ffffff; }
 
 .message {
   font-family: 'Open Sans';
@@ -2993,9 +3012,7 @@ template {
     width: 218px;
     margin-left: 102px;
     height: 47px;
-    margin-top: 66px; }
-  .promo__btn {
-    position: relative;
+    margin-top: 66px;
     z-index: 11; }
   .promo__descr {
     position: relative;
@@ -3149,15 +3166,13 @@ template {
     top: 500px;
     right: 20px;
     cursor: pointer; }
-  .slider-block a {
+  .slider-block__btn {
     display: block;
     width: 334px;
-    margin: 0 auto; }
-    .slider-block a:hover {
-      text-decoration: none; }
-  .slider-block__btn {
     margin: 0 auto;
     margin-top: 122px; }
+    .slider-block__btn:hover {
+      text-decoration: none; }
 
 .more-text {
   min-height: 530px;
@@ -3228,7 +3243,7 @@ template {
     text-transform: uppercase; }
 
 .sale {
-  min-height: 1500px; }
+  min-height: 1590px; }
   .sale__offer-wrapper-1 {
     position: relative; }
   .sale__offer-text {
@@ -3259,13 +3274,9 @@ template {
     line-height: normal;
     text-align: left;
     margin-top: 30px; }
-  .sale a {
-    width: 334px;
-    display: block;
-    margin-top: 53px; }
-    .sale a:hover {
-      text-decoration: none; }
   .sale__offer-btn {
+    display: block;
+    margin-top: 53px;
     font-family: "Open Sans";
     font-size: 29px;
     font-weight: 700;
@@ -3274,6 +3285,10 @@ template {
     text-transform: uppercase;
     letter-spacing: 5.59px;
     line-height: normal; }
+    .sale__offer-btn span {
+      width: 334px; }
+    .sale__offer-btn:hover {
+      text-decoration: none; }
   .sale__offer-wrapper-2 {
     position: relative;
     margin-top: 125px; }
@@ -3284,9 +3299,8 @@ template {
       margin-left: 122px; }
   .sale__btn-two {
     position: absolute;
-    left: 0px; }
-    .sale__btn-two .sale__offer-btn {
-      margin-left: 0; }
+    left: 0px;
+    padding-top: 18px; }
 
 .pizza {
   height: 1082px;
@@ -3975,7 +3989,8 @@ template {
         margin-left: 30px; }
     .sale .sale__btn-two {
       margin-left: 100px;
-      margin-top: 65px; }
+      margin-top: 65px;
+      padding: 10px; }
   .pizza {
     height: 940px; }
     .pizza__title {

@@ -1,4 +1,6 @@
 .btn-white {
+    display: block;
+    position: relative;
     width: 218px;
     height: 47px;
     background-color: #ffffff;
@@ -14,15 +16,26 @@
     line-height: normal;
     text-align: center;
     text-transform: uppercase;
+    padding: 1px 6px 1px 6px;;
+    span {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 218px;
+    }
     &:focus {
         outline: none;
     }
     &:hover {
         box-shadow: 1px 1px 10px #fff;
+        color: #2e3034;
+        text-decoration: none;
     }
 }
 .btn-main {
     display: block;
+    position: relative;
     width: 334px;
     height: 75px;
     background-color: #343434;
@@ -40,11 +53,19 @@
     font-style: normal;
     letter-spacing: 3.58px;
     line-height: normal;
+    span {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 218px;
+    }
     &:focus {
         outline: none;
     }
     &:hover {
         box-shadow: 1px 1px 25px #343434;
+        color: #ffffff;
     }
 }
 .message {

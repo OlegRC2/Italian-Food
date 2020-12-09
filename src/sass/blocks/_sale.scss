@@ -1,5 +1,5 @@
 .sale {
-    min-height: 1500px;
+    min-height: 1590px;
     &__offer-wrapper-1 {
         position: relative;
     }
@@ -35,15 +35,9 @@
         text-align: left;
         margin-top: 30px;
     }
-    a {
-        width: 334px;
+    &__offer-btn {
         display: block;
         margin-top: 53px;
-        &:hover {
-            text-decoration: none;
-        }
-    }
-    &__offer-btn {
         font-family: "Open Sans";
         font-size: 29px;
         font-weight: 700;
@@ -52,6 +46,12 @@
         text-transform: uppercase;
         letter-spacing: 5.59px;
         line-height: normal;
+        span {
+            width: 334px;
+        }
+        &:hover {
+            text-decoration: none;
+        }
     }
     &__offer-wrapper-2 {
         position: relative;
@@ -67,8 +67,6 @@
     &__btn-two {
         position: absolute;
         left: 0px;
-        .sale__offer-btn {
-            margin-left: 0;
-        }
+        padding-top: 18px;
     }
 }
