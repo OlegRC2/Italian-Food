@@ -23,7 +23,7 @@ gulp.task("copy-html", () => {
 
 gulp.task("build-sass", () => {
     return gulp.src("./src/sass/style.scss")
-                .pipe(sass().on('error', sass.logError))
+                .pipe(sass({outputStyle: "compressed"}).on('error', sass.logError))
                 .pipe(rename({suffix: '.min', prefix: ''}))
                 .pipe(gulp.dest(dist + "/css"))
                 .pipe(browsersync.stream());
@@ -103,10 +103,11 @@ gulp.task("build", gulp.parallel("copy-html", "build-js", "build-sass", "fonts",
 
 gulp.task("prod", () => {
     gulp.src("./src/sass/style.scss")
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({outputStyle: "compressed"}).on('error', sass.logError))
+        .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(postcss([autoprefixer()]))
         .pipe(cleanCSS())
-        .pipe(gulp.dest(dist));
+        .pipe(gulp.dest(dist + "/css"));
 
     return gulp.src("./src/js/script.js")
                 .pipe(webpack({

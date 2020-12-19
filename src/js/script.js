@@ -3,6 +3,7 @@ import search from './modules/search';
 import slider from './modules/slider';
 import moreText from './modules/moreText';
 import form from './modules/form';
+import fullVersionForMobile from './modules/fullVersionForMobile';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -31,6 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     moreText('.more-text__btn', '.more-text__hide-text', '.more-text');
     form();
+    fullVersionForMobile();
 
 });
 
